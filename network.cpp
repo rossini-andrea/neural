@@ -8,7 +8,7 @@ double sigmoid(double x)
 	return 1 / (1 + exp(-x));
 }
 
-synapse::synapse(neuron& source, double weight) :
+synapse::synapse(neuron* source, double weight) :
 	source(source),
 	weight(weight)
 {
@@ -17,7 +17,7 @@ synapse::synapse(neuron& source, double weight) :
 
 double synapse::evaluate()
 {
-	return source.output * weight;
+	return source->output * weight;
 }
 
 void neuron::evaluate()

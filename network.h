@@ -1,15 +1,16 @@
 #pragma once
+#include <vector>
 
 class neuron;
 
 class synapse
 {
 private:
-	neuron& source;
+	neuron* source;
 	double weight;
 
 public:
-	synapse(neuron& source, double weight);
+	synapse(neuron* source, double weight);
 	double evaluate();
 };
 
