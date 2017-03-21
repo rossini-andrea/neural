@@ -1,4 +1,5 @@
 #pragma once
+#include "network.h"
 
 class gene
 {
@@ -14,4 +15,6 @@ class genome
 {
 public:
 	std::vector<gene> genes;
+	network network;
+	void generate_network();
 };
