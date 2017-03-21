@@ -39,8 +39,19 @@ void neuron::evaluate()
 
 void network::evaluate()
 {
-	for (std::vector<neuron>::iterator it = neurons.begin(); it != neurons.end(); ++it)
+	int n = neurons.size();
+
+	// Evaluate the network.
+	for (int i = inputNeurons + outputNeurons; i < n; ++i)
 	{
-		it->evaluate();
+		neurons[i].evaluate();
+	}
+
+	// Evaluate outputs.
+	n = inputNeurons + outputNeurons;
+
+	for (int i = inputNeurons; i < n; ++i)
+	{
+		neurons[i].evaluate();
 	}
 }

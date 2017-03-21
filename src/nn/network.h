@@ -26,7 +26,8 @@ public:
 class network
 {
 public:
-
+	int inputNeurons;
+	int outputNeurons;
 	std::vector<neuron> neurons;
 
 	void evaluate();
