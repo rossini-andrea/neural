@@ -1,17 +1,8 @@
 #pragma once
+#include "genome.h"
 
-class gene
+class pool
 {
 public:
-	int from;
-	int to;
-	double weight;
-	int evolution;
-	bool enabled;
-};
-
-class genome
-{
-public:
-	std::vector<gene> genes;
+	std::vector<genome> genomes;
 };
