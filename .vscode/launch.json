@@ -5,8 +5,8 @@
             "name": "C++ Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceRoot}/a.exe",
-            "args": [],
+            "program": "${workspaceRoot}/bin/test002",
+            "args": ["assets/test002.genome"],
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}",
             "environment": [],
@@ -26,6 +26,7 @@
             },
             "windows": {
                 "MIMode": "gdb",
+                "miDebuggerPath": "c:/cygwin/bin/gdb.exe",
                 "setupCommands": [
                     {
                         "description": "Enable pretty-printing for gdb",

@@ -5,20 +5,12 @@
     "showOutput": "always",
     "tasks": [
         {
-            "taskName": "test001",
+            "taskName": "make_all",
             "suppressTaskName": true,
             "isBuildCommand": true,
             "isShellCommand": true,
-            "command": "g++",
-            "args": ["-o", "test001", "-g", "src/test001/main.cpp", "src/nn/network.cpp"]
-        },
-        {
-            "taskName": "test002",
-            "suppressTaskName": true,
-            "isBuildCommand": true,
-            "isShellCommand": true,
-            "command": "g++",
-            "args": ["-o", "test002", "-g", "src/test002/main.cpp", "src/nn/pool.cpp", "src/nn/genome.cpp", "src/nn/network.cpp"]
+            "command": "make",
+            "args": ["all"]
         }
     ]
 }

@@ -18,7 +18,7 @@ void pool::loadfile(const std::string &file)
 	std::string s;
 
 	// Consume first line
-	std::getline(fs, s, ',');
+	std::getline(fs, s);
 
 	if (s != "Genome")
 	{
@@ -31,7 +31,12 @@ void pool::loadfile(const std::string &file)
 
 		while (!fs.eof())
 		{
-			std::getline(fs, s, ',');
+			std::getline(fs, s);
+
+			if (s == "")
+			{
+				continue;
+			}
 
 			// New genome found, go commit the current one.
 			if (s == "Genome")
@@ -40,15 +45,19 @@ void pool::loadfile(const std::string &file)
 			}
 
 			gene g;
-			g.source = atoi(s.c_str());
-			std::getline(fs, s, ',');
-			g.destination = atoi(s.c_str());
-			std::getline(fs, s, ',');
-			g.weight = strtod(s.c_str(), NULL);
-			std::getline(fs, s, ',');
-			g.innovation = atoi(s.c_str());
-			std::getline(fs, s, ',');
-			g.enabled = atoi(s.c_str());
+			int p;
+
+			p = s.find(',');
+			g.source = atoi(s.substr(0, p).c_str());
+			p = s.erase(0, p + 1).find(',');
+			g.destination = atoi(s.substr(0, p).c_str());
+			p = s.erase(0, p + 1).find(',');
+			g.weight = strtod(s.substr(0, p).c_str(), NULL);
+			p = s.erase(0, p + 1).find(',');
+			g.innovation = atoi(s.substr(0, p).c_str());
+			s.erase(0, p + 1);
+			g.enabled = atoi(s.substr(0, p).c_str());
+
 			gn.genes.push_back(g);
 		}
 
