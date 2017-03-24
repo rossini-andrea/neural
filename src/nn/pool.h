@@ -5,8 +5,11 @@
 class pool
 {
 public:
+	std::vector<genome> genomes;
+	int inputNeurons;
+	int outputNeurons;
+
 	pool();
 	pool(const std::string &file);
-	std::vector<genome> genomes;
 	void loadfile(const std::string &file);
 };

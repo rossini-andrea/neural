@@ -6,7 +6,7 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceRoot}/bin/test002",
-            "args": ["assets/test002.genome"],
+            "args": ["assets/xor.pool"],
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}",
             "environment": [],

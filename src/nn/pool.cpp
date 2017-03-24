@@ -16,8 +16,24 @@ void pool::loadfile(const std::string &file)
 {
 	std::ifstream fs(file.c_str());
 	std::string s;
+	int p;
 
 	// Consume first line
+	std::getline(fs, s);
+
+	if (s != "Pool")
+	{
+		return; // TODO: throw
+	}
+
+	// Read pool information
+	std::getline(fs, s);
+	p = s.find(',');
+	inputNeurons = atoi(s.substr(0, p).c_str());
+	s.erase(0, p + 1);
+	outputNeurons = atoi(s.substr(0, p).c_str());
+
+	// Read first genome header
 	std::getline(fs, s);
 
 	if (s != "Genome")
@@ -28,6 +44,8 @@ void pool::loadfile(const std::string &file)
 	while (!fs.eof())
 	{
 		genome gn;
+		gn.network.inputNeurons = inputNeurons;
+		gn.network.outputNeurons = outputNeurons;
 
 		while (!fs.eof())
 		{
@@ -45,7 +63,6 @@ void pool::loadfile(const std::string &file)
 			}
 
 			gene g;
-			int p;
 
 			p = s.find(',');
 			g.source = atoi(s.substr(0, p).c_str());
