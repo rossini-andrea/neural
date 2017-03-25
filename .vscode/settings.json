@@ -36,6 +36,10 @@
 		"xmemory0": "cpp",
 		"xstddef": "cpp",
 		"xtr1common": "cpp",
-		"*.tcc": "cpp"
+		"*.tcc": "cpp",
+		"cctype": "cpp",
+		"clocale": "cpp",
+		"cwctype": "cpp",
+		"string": "cpp"
 	}
 }

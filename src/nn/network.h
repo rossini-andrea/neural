@@ -5,13 +5,10 @@ class neuron;
 
 class synapse
 {
-private:
-	neuron* source;
-	double weight;
-
 public:
-	synapse(neuron* source, double weight);
-	double evaluate();
+	int source;
+	double weight;
+	synapse(int source, double weight);
 };
 
 class neuron
@@ -19,8 +16,6 @@ class neuron
 public:
 	std::vector<synapse> inputs;
 	double output;
-
-	void evaluate();
 };
 
 class network
@@ -29,6 +24,10 @@ public:
 	int inputNeurons;
 	int outputNeurons;
 	std::vector<neuron> neurons;
+	std::vector<int> evaluationOrder;
 
+	void visit(int i, std::vector<int>& sorted, std::vector<bool>& marked);
+	void sorttopology();
 	void evaluate();
+	void evaluateNeuron(neuron& which);
 };

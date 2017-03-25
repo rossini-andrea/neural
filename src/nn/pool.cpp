@@ -44,8 +44,8 @@ void pool::loadfile(const std::string &file)
 	while (!fs.eof())
 	{
 		genome gn;
-		gn.network.inputNeurons = inputNeurons;
-		gn.network.outputNeurons = outputNeurons;
+		gn.neuralnetwork.inputNeurons = inputNeurons;
+		gn.neuralnetwork.outputNeurons = outputNeurons;
 
 		while (!fs.eof())
 		{

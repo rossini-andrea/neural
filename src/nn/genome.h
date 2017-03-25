@@ -15,6 +15,7 @@ class genome
 {
 public:
 	std::vector<gene> genes;
-	network network;
+	network neuralnetwork;
+	int fitness;
 	void generate_network();
 };

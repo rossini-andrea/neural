@@ -13,14 +13,16 @@ int main()
 	network1.neurons.resize(6);
 
 	// Build the connections
-	network1.neurons.at(4).inputs.push_back(synapse(&network1.neurons.at(0), 0.5));
-	network1.neurons.at(4).inputs.push_back(synapse(&network1.neurons.at(1), 0.5));
+	network1.neurons.at(4).inputs.push_back(synapse(0, 0.5));
+	network1.neurons.at(4).inputs.push_back(synapse(1, 0.5));
 
-	network1.neurons.at(5).inputs.push_back(synapse(&network1.neurons.at(1), 0.5));
-	network1.neurons.at(5).inputs.push_back(synapse(&network1.neurons.at(2), 0.5));
+	network1.neurons.at(5).inputs.push_back(synapse(1, 0.5));
+	network1.neurons.at(5).inputs.push_back(synapse(2, 0.5));
 
-	network1.neurons.at(3).inputs.push_back(synapse(&network1.neurons.at(4), 0.5));
-	network1.neurons.at(3).inputs.push_back(synapse(&network1.neurons.at(5), 0.5));
+	network1.neurons.at(3).inputs.push_back(synapse(4, 0.5));
+	network1.neurons.at(3).inputs.push_back(synapse(5, 0.5));
+
+	network1.sorttopology();
 
 	// Too lazy to build accessors
 	network1.inputNeurons = 3;

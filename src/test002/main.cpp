@@ -16,11 +16,11 @@ int main(int argc, char *argv[])
 		double d;
 		cout << "Input n°" << i+1 << ": ";
 		cin >> d;
-		pool.genomes.at(0).network.neurons.at(i).output = d;
+		pool.genomes.at(0).neuralnetwork.neurons.at(i).output = d;
 	}
 
-	pool.genomes.at(0).network.evaluate();
-	cout << "Output is: " << pool.genomes.at(0).network.neurons.at(pool.inputNeurons).output << "\n";
+	pool.genomes.at(0).neuralnetwork.evaluate();
+	cout << "Output is: " << pool.genomes.at(0).neuralnetwork.neurons.at(pool.inputNeurons).output << "\n";
 
 	return 0;
 }
