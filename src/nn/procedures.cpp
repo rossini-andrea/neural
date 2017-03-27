@@ -1,4 +1,6 @@
 #include <cstdlib>
+#include <cmath>
+#include <ctime>
 #include "procedures.h"
 
 double sigmoid(double x)
@@ -12,12 +14,12 @@ randomgenerator::randomgenerator()
 	srand(time(NULL));
 }
 
-randomgenerator::reset()
+void randomgenerator::reset()
 {
 	srand(time(NULL));
 }
 
-double newdouble()
+double randomgenerator::newdouble()
 {
 	return (double)rand() / RAND_MAX;
 }

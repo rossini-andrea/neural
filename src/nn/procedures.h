@@ -6,7 +6,7 @@ class randomgenerator
 {
 public:
 	randomgenerator();
-	reset();
+	void reset();
 	double newdouble();
-}
+};
 
