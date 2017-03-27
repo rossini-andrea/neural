@@ -25,7 +25,7 @@ from,to,weight,innovation,enabled
 ...
 ```
 
-## The XOR test
+## The XOR test - Human created version
 
 I chose to solve the problem by expanding it into the boolean expression:
 
@@ -49,3 +49,11 @@ The expected results should be:
 * 0 xor 1 : 1
 * 1 xor 0 : 1
 * 1 xor 1 : 0
+
+## References
+
+Here is a set of links I gathered while studying the subject:
+
+* [Mar I/O video](https://www.youtube.com/watch?v=qv6UVOQ0F44)
+* [Mar I/O code](http://pastebin.com/ZZmSNaHX)
+* [NEAT](http://nn.cs.utexas.edu/downloads/papers/stanley.ec02.pdf)

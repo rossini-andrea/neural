@@ -1,12 +1,8 @@
 #include <cmath>
 #include <vector>
 
+#include "procedures.h"
 #include "network.h"
-
-double sigmoid(double x)
-{
-	return 1 / (1 + exp(-x));
-}
 
 synapse::synapse(int source, double weight) :
 	source(source),
@@ -33,6 +29,9 @@ void network::evaluateNeuron(neuron& which)
 }
 
 // Sorts nodes topologically (TODO: refactor into an algorithm)
+// Theoretically this works only for forward networks, working with recursive
+// networks could give strange results. But I believe genetic evolution
+// will circumvent the issue. Life always finds a way.
 void network::sorttopology()
 {
 	int n = neurons.size();

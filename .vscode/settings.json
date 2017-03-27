@@ -40,6 +40,8 @@
 		"cctype": "cpp",
 		"clocale": "cpp",
 		"cwctype": "cpp",
-		"string": "cpp"
+		"string": "cpp",
+		"array": "cpp",
+		"tuple": "cpp"
 	}
 }
