@@ -11,8 +11,8 @@ void genome::generate_network()
 {
 	neuralnetwork.neurons.clear();
 	std::sort(genes.begin(), genes.end(), compare_genes);
-	int max = (genes.end() - 1)->destination + 1;
-	neuralnetwork.neurons.resize(max);
+	neurons = (genes.end() - 1)->destination + 1; // TODO: Put in a safer place
+	neuralnetwork.neurons.resize(neurons);
 
 	for (std::vector<gene>::iterator it = genes.begin(); it != genes.end(); ++it)
 	{

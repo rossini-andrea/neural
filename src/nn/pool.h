@@ -17,6 +17,8 @@ public:
 	double disableMutationChance;
 	double weightMutationPower;
 
+	int innovationIndex;
+
 	pool();
 	pool(const std::string &file);
 	void loadfile(const std::string &file);

@@ -23,3 +23,13 @@ double randomgenerator::newdouble()
 {
 	return (double)rand() / RAND_MAX;
 }
+
+int randomgenerator::newint(int min, int max)
+{
+	return min + (rand() * (max - min) / RAND_MAX));
+}
+
+bool randomgenerator::newbool()
+{
+	return rand() & 1;
+}

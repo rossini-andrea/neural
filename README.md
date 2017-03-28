@@ -57,3 +57,4 @@ Here is a set of links I gathered while studying the subject:
 * [Mar I/O video](https://www.youtube.com/watch?v=qv6UVOQ0F44)
 * [Mar I/O code](http://pastebin.com/ZZmSNaHX)
 * [NEAT](http://nn.cs.utexas.edu/downloads/papers/stanley.ec02.pdf)
+* [NEAT user page](https://www.cs.ucf.edu/~kstanley/neat.html)

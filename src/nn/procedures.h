@@ -8,5 +8,7 @@ public:
 	randomgenerator();
 	void reset();
 	double newdouble();
+	int newint(int min, int max);
+	bool newbool();
 };
 
