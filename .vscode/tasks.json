@@ -3,14 +3,12 @@
     // for the documentation about the tasks.json format
     "version": "0.1.0",
     "showOutput": "always",
-    "tasks": [
-        {
-            "taskName": "make_all",
-            "suppressTaskName": true,
-            "isBuildCommand": true,
-            "isShellCommand": true,
-            "command": "make",
-            "args": ["all"]
-        }
-    ]
+    "taskName": "make_all",
+    "suppressTaskName": true,
+    "isBuildCommand": true,
+    "isShellCommand": true,
+    "windows": {
+        "command": "C:/cygwin/bin/env.exe",
+        "args": ["CHERE_INVOKING=1", "C:/cygwin/bin/bash", "--login", "-i", "-c", "make", "all"]
+    }
 }

@@ -26,7 +26,7 @@ double randomgenerator::newdouble()
 
 int randomgenerator::newint(int min, int max)
 {
-	return min + (rand() * (max - min) / RAND_MAX));
+	return min + (rand() * (max - min) / RAND_MAX);
 }
 
 bool randomgenerator::newbool()
