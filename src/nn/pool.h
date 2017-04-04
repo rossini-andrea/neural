@@ -1,11 +1,14 @@
 #pragma once
 #include <string>
 #include "genome.h"
+#include "species.h"
 
 class pool
 {
 public:
 	std::vector<genome> genomes;
+	std::vector<species> allSpecies;
+
 	int inputNeurons;
 	int outputNeurons;
 

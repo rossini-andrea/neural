@@ -33,6 +33,14 @@ void pool::loadfile(const std::string &file)
 	s.erase(0, p + 1);
 	outputNeurons = atoi(s.substr(0, p).c_str());
 
+	// Read first species header
+	std::getline(fs, s);
+
+	if (s != "Species")
+	{
+		return; // TODO: throw
+	}
+
 	// Read first genome header
 	std::getline(fs, s);
 
