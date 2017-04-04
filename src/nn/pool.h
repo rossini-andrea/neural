@@ -6,7 +6,6 @@
 class pool
 {
 public:
-	std::vector<genome> genomes;
 	std::vector<species> allSpecies;
 
 	int inputNeurons;
