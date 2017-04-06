@@ -30,8 +30,10 @@ void pool::loadfile(const std::string &file)
 	std::getline(fs, s);
 	p = s.find(',');
 	inputNeurons = atoi(s.substr(0, p).c_str());
-	s.erase(0, p + 1);
+	p = s.erase(0, p + 1).find(',');
 	outputNeurons = atoi(s.substr(0, p).c_str());
+	s.erase(0, p + 1);
+	innovationIndex = atoi(s.substr(0, p).c_str());
 
 	// Read first species header
 	std::getline(fs, s);

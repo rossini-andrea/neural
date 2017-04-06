@@ -58,3 +58,4 @@ Here is a set of links I gathered while studying the subject:
 * [Mar I/O code](http://pastebin.com/ZZmSNaHX)
 * [NEAT](http://nn.cs.utexas.edu/downloads/papers/stanley.ec02.pdf)
 * [NEAT user page](https://www.cs.ucf.edu/~kstanley/neat.html)
+* [Another page about NEAT](https://www.cs.cmu.edu/afs/cs/project/jair/pub/volume21/stanley04a-html/node3.html)

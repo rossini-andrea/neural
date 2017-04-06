@@ -4,6 +4,6 @@
 class species
 {
 public:
-	// First member is always the sample gene.
+	// First member is for the moment the sample gene.
 	std::vector<genome> genomes;
 }

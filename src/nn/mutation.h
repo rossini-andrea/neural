@@ -24,9 +24,17 @@ private:
 	void mutateBias(genome& g);
 	void mutateNode(genome& g);
 	gene makeInnovationGene(innovationkey& key);
-	void addConnection(innovationkey& key)
+	void addConnection(innovationkey& key);
 
 public:
+	double weightMutationChance;
+	double linkMutationChance;
+	double biasMutationChance;
+	double nodeMutationChance;
+	double enableMutationChance;
+	double disableMutationChance;
+	double weightMutationPower;
+
 	mutation(pool& p);
 	void mutate(genome& g);
 }

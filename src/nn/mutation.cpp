@@ -16,37 +16,37 @@ void mutation::mutate(genome& g)
 	}
 
 	// Weight
-	if (random.newdouble() <= targetPool.weightMutationChance)
+	if (random.newdouble() <= weightMutationChance)
 	{
 		mutateWeight(g);
 	}
 
 	// Enable
-	if (random.newdouble() <= targetPool.enableMutationChance)
+	if (random.newdouble() <= enableMutationChance)
 	{
 		mutateEnable(g, true);
 	}
 
 	// Disable
-	if (random.newdouble() <= targetPool.disableMutationChance)
+	if (random.newdouble() <= disableMutationChance)
 	{
 		mutateEnable(g, false);
 	}
 
 	// Link
-	if (random.newdouble() <= targetPool.linkMutationChance)
+	if (random.newdouble() <= linkMutationChance)
 	{
 		mutateLink(g);
 	}
 
 	// Bias
-	if (random.newdouble() <= targetPool.biasMutationChance)
+	if (random.newdouble() <= biasMutationChance)
 	{
 		mutateBias(g);
 	}
 
 	// Node
-	if (random.newdouble() <= targetPool.nodeMutationChance)
+	if (random.newdouble() <= nodeMutationChance)
 	{
 		mutateNode(g);
 	}
@@ -58,11 +58,11 @@ void mutation::mutateWeight(genome& g)
 
 	if (random.newbool())
 	{
-		g.genes.at(i)->weight *= targetPool.weightMutationPower;
+		g.genes.at(i)->weight *= weightMutationPower;
 	}
 	else
 	{
-		g.genes.at(i)->weight /= targetPool.weightMutationPower;
+		g.genes.at(i)->weight /= weightMutationPower;
 	}
 }
 

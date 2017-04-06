@@ -10,15 +10,7 @@ public:
 
 	int inputNeurons;
 	int outputNeurons;
-
-	double weightMutationChance;
-	double linkMutationChance;
-	double biasMutationChance;
-	double nodeMutationChance;
-	double enableMutationChance;
-	double disableMutationChance;
-	double weightMutationPower;
-
+	int generationCount;
 	int innovationIndex;
 
 	pool();
