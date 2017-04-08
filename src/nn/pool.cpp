@@ -32,6 +32,8 @@ void pool::loadfile(const std::string &file)
 	inputNeurons = atoi(s.substr(0, p).c_str());
 	p = s.erase(0, p + 1).find(',');
 	outputNeurons = atoi(s.substr(0, p).c_str());
+	p = s.erase(0, p + 1).find(',');
+	generationCount = atoi(s.substr(0, p).c_str());
 	s.erase(0, p + 1);
 	innovationIndex = atoi(s.substr(0, p).c_str());
 

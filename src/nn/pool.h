@@ -13,6 +13,8 @@ public:
 	int generationCount;
 	int innovationIndex;
 
+	double averageFitness;
+
 	pool();
 	pool(const std::string &file);
 	void loadfile(const std::string &file);

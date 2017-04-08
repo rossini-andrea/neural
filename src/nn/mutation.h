@@ -8,7 +8,7 @@ class innovationkey
 {
 	int from;
 	int to;
-}
+};
 
 class mutation
 {
@@ -37,4 +37,4 @@ public:
 
 	mutation(pool& p);
 	void mutate(genome& g);
-}
+};

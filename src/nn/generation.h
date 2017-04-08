@@ -9,4 +9,4 @@ private:
 
 public:
 	generation(pool& p);
-}
+};

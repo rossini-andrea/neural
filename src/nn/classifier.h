@@ -12,4 +12,5 @@ public:
 
 	classifier(pool& p);
 	void classifySpecies();
-}
+	double genomeDelta(genome &g1, genome &g2);
+};

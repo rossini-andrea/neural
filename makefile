@@ -17,5 +17,5 @@ bin/test002 : bin src/test002/main.cpp src/nn/pool.cpp src/nn/genome.cpp src/nn/
 # All unit tests
 tests : bin/testunit
 
-bin/testunit : bin src/testunit/main.cpp
-	g++ -isystem ${GTEST_DIR}/include -pthread src/testunit/main.cpp libgtest.a -o $@
+bin/testunit : bin src/testunit/main.cpp src/nn/network.cpp src/nn/procedures.cpp
+	g++ -isystem ${GTEST_DIR}/include -pthread src/testunit/main.cpp src/nn/network.cpp src/nn/procedures.cpp ${GTEST_DIR}/make/gtest.a -o $@

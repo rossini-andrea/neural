@@ -7,7 +7,7 @@ classifier::classifier(pool& p) :
 
 }
 
-void classifySpecies(genome &g)
+void classifier::classifySpecies(genome &g)
 {
 	for (targetPool.species::iterator it = targetPool.species.begin(); it != targetPool.species.end(); ++it)
 	{
@@ -23,7 +23,7 @@ void classifySpecies(genome &g)
 	targetPool.species.back().genomes.push_back(g);
 }
 
-void genomeDelta(genome &g1, genome &g2)
+double classifier::genomeDelta(genome &g1, genome &g2)
 {
 	int disjoint = 0, excess = 0, matches = 0;
 	double weight = 0;
